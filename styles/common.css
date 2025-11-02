@@ -119,20 +119,3 @@ input[type="radio"] {
     display: grid;
     place-content: center;
 }
-
-.common-actions-result {
-    display: flex;
-    align-self: flex-end;
-    margin-top: 160px;
-    gap: 13px;
-}
-
-.common-actions-result a {
-    text-decoration: none;
-    font-size: 17px;
-    color: #6933dc;
-}
-
-.common-actions-result a:hover {
-    text-decoration: underline;
-}

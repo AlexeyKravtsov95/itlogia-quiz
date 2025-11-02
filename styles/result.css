@@ -36,3 +36,20 @@
     font-family: "MuseoSansCyrl-700", sans-serif;
     color: white;
 }
+
+.action-show-result {
+    display: flex;
+    align-self: flex-end;
+    margin-top: 160px;
+    gap: 13px;
+}
+
+.action-show-result a {
+    text-decoration: none;
+    font-size: 17px;
+    color: #6933dc;
+}
+
+.action-show-result a:hover {
+    text-decoration: underline;
+}

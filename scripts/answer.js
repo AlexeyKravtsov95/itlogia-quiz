@@ -31,6 +31,7 @@
                     }
                     this.getAnswers()
                     this.showListAnswer()
+                    this.prevBack()
                 }else {
                     location.href = 'index.html';
                 }
@@ -60,7 +61,7 @@
         },
 
         isRightAnswer(answerId) {
-            return this.rightAnswer.has(answerId);
+            return this.rightAnswer.includes(answerId);
         },
 
         showListAnswer() {
@@ -103,11 +104,21 @@
                     optionElement.appendChild(inputElement);
                     optionElement.appendChild(labelElement);
                     optionsContainer.appendChild(optionElement);
-
-
                 });
                 questionContainer.appendChild(optionsContainer);
-            })
+            });
+        },
+
+        prevBack() {
+            const url = new URL(location.href);
+            const id = url.searchParams.get('id');
+            const score = url.searchParams.get('score');
+            const total = url.searchParams.get('total');
+            const param = url.searchParams.get('userAnswer');
+
+            document.getElementById('prev-back').onclick = function () {
+                location.href = `result.html?score=${score}&total=${total}&id=${id}&userAnswer=${param}`;
+            }
         }
     }
 
