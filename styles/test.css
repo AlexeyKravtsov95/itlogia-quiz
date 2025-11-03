@@ -151,3 +151,10 @@ input[type="radio"]:checked::before {
     height: 14px;
     top: 6px;
 }
+
+.pass-question a.disabled {
+    cursor: not-allowed;
+    text-decoration: none;
+    pointer-events: none;
+    color: #e2dfe7;
+}

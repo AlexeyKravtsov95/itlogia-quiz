@@ -112,8 +112,10 @@
             });
             if (chosenOption && chosenOption.chosenAnswerId) {
                 this.nextButtonElement.removeAttribute('disabled');
+                this.passButtonElement.classList.add('disabled');
             } else {
                 this.nextButtonElement.setAttribute('disabled', 'disabled');
+                this.passButtonElement.classList.remove('disabled');
             }
             if (this.currentQuestionIndex === this.quiz.questions.length) {
                 this.nextButtonElement.innerText = 'Завершить';
@@ -129,6 +131,7 @@
 
         chooseAnswer() {
             this.nextButtonElement.removeAttribute('disabled');
+            this.passButtonElement.classList.add('disabled');
         },
 
         move(action) {
